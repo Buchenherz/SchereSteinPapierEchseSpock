@@ -1,26 +1,154 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11163.2" systemVersion="16A270f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11133"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SchereSteinPapierEchseSpock" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yw2-f9-BpI">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="ZGF-QS-sqA"/>
+                                    <constraint firstAttribute="width" secondItem="yw2-f9-BpI" secondAttribute="height" multiplier="1:1" id="uqE-Ig-By7"/>
+                                    <constraint firstAttribute="width" constant="80" id="yRq-LB-ClU"/>
+                                </constraints>
+                                <state key="normal" title="Papier" image="Papier"/>
+                                <connections>
+                                    <action selector="choosePapier" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gw7-Wo-M6y"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="idg-r0-cW9">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="HTy-FO-f3w"/>
+                                    <constraint firstAttribute="width" secondItem="idg-r0-cW9" secondAttribute="height" multiplier="1:1" id="Qk3-nx-BIR"/>
+                                    <constraint firstAttribute="height" constant="80" id="vOY-Ma-tug"/>
+                                </constraints>
+                                <state key="normal" title="Spock" image="Spock"/>
+                                <connections>
+                                    <action selector="chooseSpock" destination="BYZ-38-t0r" eventType="touchUpInside" id="K4Y-X3-XMu"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" alpha="0.34999999999999998" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrows" translatesAutoresizingMaskIntoConstraints="NO" id="xRM-uD-1fA">
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="xRM-uD-1fA" secondAttribute="height" multiplier="95:86" id="Df2-If-NLS"/>
+                                    <constraint firstAttribute="width" constant="190" id="YAf-Yr-fwx"/>
+                                    <constraint firstAttribute="height" constant="172" id="wd2-cq-4Yd"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ewh-cd-pLL">
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ewh-cd-pLL" secondAttribute="height" multiplier="1:1" id="wVP-l5-hqV"/>
+                                    <constraint firstAttribute="width" constant="80" id="x8K-br-zWo"/>
+                                    <constraint firstAttribute="height" constant="80" id="yyU-gv-aS7"/>
+                                </constraints>
+                                <state key="normal" title="Schere" image="Schere">
+                                    <color key="titleColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="0.0" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="chooseSchere" destination="BYZ-38-t0r" eventType="touchUpInside" id="glN-aQ-Lhr"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7bq-8f-xZg">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="62" id="PdP-ii-VcJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="44"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.25" alpha="0.64924015410958902" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <size key="shadowOffset" width="0.0" height="1"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Computer chose:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xaf-gp-8vu">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Schere" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qat-46-flp">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gQv-Nj-V5K">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="3hT-Hm-25y"/>
+                                    <constraint firstAttribute="width" secondItem="gQv-Nj-V5K" secondAttribute="height" multiplier="1:1" id="A8N-3L-aYi"/>
+                                    <constraint firstAttribute="height" constant="80" id="bvU-2t-Tu4"/>
+                                </constraints>
+                                <state key="normal" title="Stein" image="Stein"/>
+                                <connections>
+                                    <action selector="chooseStein" destination="BYZ-38-t0r" eventType="touchUpInside" id="8rn-CG-b84"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="htj-S7-LRZ">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="D68-tS-kWP"/>
+                                    <constraint firstAttribute="width" secondItem="htj-S7-LRZ" secondAttribute="height" multiplier="1:1" id="ESH-Wf-iK1"/>
+                                    <constraint firstAttribute="width" constant="80" id="q4v-AT-Yem"/>
+                                </constraints>
+                                <state key="normal" title="Echse" image="Echse"/>
+                                <connections>
+                                    <action selector="chooseEchse" destination="BYZ-38-t0r" eventType="touchUpInside" id="ImJ-P9-P1R"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92549019610000005" green="0.94117647059999998" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="7bq-8f-xZg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1Dg-NS-e9K"/>
+                            <constraint firstItem="ewh-cd-pLL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="66" id="1oA-vd-eJU"/>
+                            <constraint firstItem="qat-46-flp" firstAttribute="top" secondItem="xaf-gp-8vu" secondAttribute="bottom" constant="8" symbolic="YES" id="41C-Pl-8zh"/>
+                            <constraint firstItem="xaf-gp-8vu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5Oj-ax-et5"/>
+                            <constraint firstItem="7bq-8f-xZg" firstAttribute="leading" secondItem="xaf-gp-8vu" secondAttribute="leading" id="8C4-rM-InZ"/>
+                            <constraint firstItem="htj-S7-LRZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-66" id="9C2-Kb-ypK"/>
+                            <constraint firstItem="xRM-uD-1fA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-4" id="Cbk-Rx-dJn"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qat-46-flp" secondAttribute="bottom" constant="20" id="F3o-72-aJ1"/>
+                            <constraint firstItem="yw2-f9-BpI" firstAttribute="leading" secondItem="xRM-uD-1fA" secondAttribute="trailing" constant="-19" id="GxE-dt-Y3c"/>
+                            <constraint firstItem="gQv-Nj-V5K" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LPr-Q3-owo"/>
+                            <constraint firstItem="xRM-uD-1fA" firstAttribute="leading" secondItem="idg-r0-cW9" secondAttribute="trailing" constant="-27" id="VGA-3A-IMt"/>
+                            <constraint firstItem="xRM-uD-1fA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-93" id="VdC-SO-SfT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xaf-gp-8vu" secondAttribute="trailing" constant="20" id="cV4-Wc-txM"/>
+                            <constraint firstItem="idg-r0-cW9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-124" id="e2n-Co-Zf9"/>
+                            <constraint firstItem="htj-S7-LRZ" firstAttribute="top" secondItem="xRM-uD-1fA" secondAttribute="bottom" constant="-35" id="lOb-NL-pTc"/>
+                            <constraint firstItem="xaf-gp-8vu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="nJ0-bj-F7Q"/>
+                            <constraint firstItem="xaf-gp-8vu" firstAttribute="top" secondItem="7bq-8f-xZg" secondAttribute="bottom" constant="65" id="oLg-xf-FPd"/>
+                            <constraint firstItem="yw2-f9-BpI" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-124" id="qld-g3-3W8"/>
+                            <constraint firstItem="ewh-cd-pLL" firstAttribute="top" secondItem="xRM-uD-1fA" secondAttribute="bottom" constant="-35" id="tQn-fr-wkY"/>
+                            <constraint firstItem="qat-46-flp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="w0I-Py-lnB"/>
+                            <constraint firstItem="xRM-uD-1fA" firstAttribute="top" secondItem="gQv-Nj-V5K" secondAttribute="bottom" constant="-10" id="wsF-Xv-4XU"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="computerResultLabel" destination="qat-46-flp" id="E1P-bD-Ecg"/>
+                        <outlet property="winLoseLabel" destination="7bq-8f-xZg" id="xdo-Fp-OlJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="24.375" y="35.91549295774648"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Echse" width="825" height="822"/>
+        <image name="Papier" width="825" height="822"/>
+        <image name="Schere" width="825" height="822"/>
+        <image name="Spock" width="825" height="822"/>
+        <image name="Stein" width="825" height="822"/>
+        <image name="arrows" width="445" height="400"/>
+    </resources>
 </document>
